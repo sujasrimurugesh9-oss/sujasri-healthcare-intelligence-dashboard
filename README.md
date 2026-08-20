@@ -1,1011 +1,132 @@
-## 1. Project Structure
+HealthCare Operation Intelligence Dashboard
 
-        │       │   │   │   │   │   
-        │       │   │   │   │   └───__pycache__
-        │       │   │   │   │           __init__.cpython-311.pyc
-        │       │   │   │   │           
-        │       │   │   │   ├───Indiana
-        │       │   │   │   │   │   Indianapolis
-        │       │   │   │   │   │   Knox
-        │       │   │   │   │   │   Marengo
-        │       │   │   │   │   │   Petersburg
-        │       │   │   │   │   │   Tell_City
-        │       │   │   │   │   │   Vevay
-        │       │   │   │   │   │   Vincennes
-        │       │   │   │   │   │   Winamac
-        │       │   │   │   │   │   __init__.py
-        │       │   │   │   │   │   
-        │       │   │   │   │   └───__pycache__
-        │       │   │   │   │           __init__.cpython-311.pyc
-        │       │   │   │   │           
-        │       │   │   │   ├───Kentucky
-        │       │   │   │   │   │   Louisville
-        │       │   │   │   │   │   Monticello
-        │       │   │   │   │   │   __init__.py
-        │       │   │   │   │   │   
-        │       │   │   │   │   └───__pycache__
-        │       │   │   │   │           __init__.cpython-311.pyc
-        │       │   │   │   │           
-        │       │   │   │   ├───North_Dakota
-        │       │   │   │   │   │   Beulah
-        │       │   │   │   │   │   Center
-        │       │   │   │   │   │   New_Salem
-        │       │   │   │   │   │   __init__.py
-        │       │   │   │   │   │   
-        │       │   │   │   │   └───__pycache__
-        │       │   │   │   │           __init__.cpython-311.pyc
-        │       │   │   │   │           
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Antarctica
-        │       │   │   │   │   Casey
-        │       │   │   │   │   Davis
-        │       │   │   │   │   DumontDUrville
-        │       │   │   │   │   Macquarie
-        │       │   │   │   │   Mawson
-        │       │   │   │   │   McMurdo
-        │       │   │   │   │   Palmer
-        │       │   │   │   │   Rothera
-        │       │   │   │   │   South_Pole
-        │       │   │   │   │   Syowa
-        │       │   │   │   │   Troll
-        │       │   │   │   │   Vostok
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Arctic
-        │       │   │   │   │   Longyearbyen
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Asia
-        │       │   │   │   │   Aden
-        │       │   │   │   │   Almaty
-        │       │   │   │   │   Amman
-        │       │   │   │   │   Anadyr
-        │       │   │   │   │   Aqtau
-        │       │   │   │   │   Aqtobe
-        │       │   │   │   │   Ashgabat
-        │       │   │   │   │   Ashkhabad
-        │       │   │   │   │   Atyrau
-        │       │   │   │   │   Baghdad
-        │       │   │   │   │   Bahrain
-        │       │   │   │   │   Baku
-        │       │   │   │   │   Bangkok
-        │       │   │   │   │   Barnaul
-        │       │   │   │   │   Beirut
-        │       │   │   │   │   Bishkek
-        │       │   │   │   │   Brunei
-        │       │   │   │   │   Calcutta
-        │       │   │   │   │   Chita
-        │       │   │   │   │   Choibalsan
-        │       │   │   │   │   Chongqing
-        │       │   │   │   │   Chungking
-        │       │   │   │   │   Colombo
-        │       │   │   │   │   Dacca
-        │       │   │   │   │   Damascus
-        │       │   │   │   │   Dhaka
-        │       │   │   │   │   Dili
-        │       │   │   │   │   Dubai
-        │       │   │   │   │   Dushanbe
-        │       │   │   │   │   Famagusta
-        │       │   │   │   │   Gaza
-        │       │   │   │   │   Harbin
-        │       │   │   │   │   Hebron
-        │       │   │   │   │   Hong_Kong
-        │       │   │   │   │   Hovd
-        │       │   │   │   │   Ho_Chi_Minh
-        │       │   │   │   │   Irkutsk
-        │       │   │   │   │   Istanbul
-        │       │   │   │   │   Jakarta
-        │       │   │   │   │   Jayapura
-        │       │   │   │   │   Jerusalem
-        │       │   │   │   │   Kabul
-        │       │   │   │   │   Kamchatka
-        │       │   │   │   │   Karachi
-        │       │   │   │   │   Kashgar
-        │       │   │   │   │   Kathmandu
-        │       │   │   │   │   Katmandu
-        │       │   │   │   │   Khandyga
-        │       │   │   │   │   Kolkata
-        │       │   │   │   │   Krasnoyarsk
-        │       │   │   │   │   Kuala_Lumpur
-        │       │   │   │   │   Kuching
-        │       │   │   │   │   Kuwait
-        │       │   │   │   │   Macao
-        │       │   │   │   │   Macau
-        │       │   │   │   │   Magadan
-        │       │   │   │   │   Makassar
-        │       │   │   │   │   Manila
-        │       │   │   │   │   Muscat
-        │       │   │   │   │   Nicosia
-        │       │   │   │   │   Novokuznetsk
-        │       │   │   │   │   Novosibirsk
-        │       │   │   │   │   Omsk
-        │       │   │   │   │   Oral
-        │       │   │   │   │   Phnom_Penh
-        │       │   │   │   │   Pontianak
-        │       │   │   │   │   Pyongyang
-        │       │   │   │   │   Qatar
-        │       │   │   │   │   Qostanay
-        │       │   │   │   │   Qyzylorda
-        │       │   │   │   │   Rangoon
-        │       │   │   │   │   Riyadh
-        │       │   │   │   │   Saigon
-        │       │   │   │   │   Sakhalin
-        │       │   │   │   │   Samarkand
-        │       │   │   │   │   Seoul
-        │       │   │   │   │   Shanghai
-        │       │   │   │   │   Singapore
-        │       │   │   │   │   Srednekolymsk
-        │       │   │   │   │   Taipei
-        │       │   │   │   │   Tashkent
-        │       │   │   │   │   Tbilisi
-        │       │   │   │   │   Tehran
-        │       │   │   │   │   Tel_Aviv
-        │       │   │   │   │   Thimbu
-        │       │   │   │   │   Thimphu
-        │       │   │   │   │   Tokyo
-        │       │   │   │   │   Tomsk
-        │       │   │   │   │   Ujung_Pandang
-        │       │   │   │   │   Ulaanbaatar
-        │       │   │   │   │   Ulan_Bator
-        │       │   │   │   │   Urumqi
-        │       │   │   │   │   Ust-Nera
-        │       │   │   │   │   Vientiane
-        │       │   │   │   │   Vladivostok
-        │       │   │   │   │   Yakutsk
-        │       │   │   │   │   Yangon
-        │       │   │   │   │   Yekaterinburg
-        │       │   │   │   │   Yerevan
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Atlantic
-        │       │   │   │   │   Azores
-        │       │   │   │   │   Bermuda
-        │       │   │   │   │   Canary
-        │       │   │   │   │   Cape_Verde
-        │       │   │   │   │   Faeroe
-        │       │   │   │   │   Faroe
-        │       │   │   │   │   Jan_Mayen
-        │       │   │   │   │   Madeira
-        │       │   │   │   │   Reykjavik
-        │       │   │   │   │   South_Georgia
-        │       │   │   │   │   Stanley
-        │       │   │   │   │   St_Helena
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Australia
-        │       │   │   │   │   ACT
-        │       │   │   │   │   Adelaide
-        │       │   │   │   │   Brisbane
-        │       │   │   │   │   Broken_Hill
-        │       │   │   │   │   Canberra
-        │       │   │   │   │   Currie
-        │       │   │   │   │   Darwin
-        │       │   │   │   │   Eucla
-        │       │   │   │   │   Hobart
-        │       │   │   │   │   LHI
-        │       │   │   │   │   Lindeman
-        │       │   │   │   │   Lord_Howe
-        │       │   │   │   │   Melbourne
-        │       │   │   │   │   North
-        │       │   │   │   │   NSW
-        │       │   │   │   │   Perth
-        │       │   │   │   │   Queensland
-        │       │   │   │   │   South
-        │       │   │   │   │   Sydney
-        │       │   │   │   │   Tasmania
-        │       │   │   │   │   Victoria
-        │       │   │   │   │   West
-        │       │   │   │   │   Yancowinna
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Brazil
-        │       │   │   │   │   Acre
-        │       │   │   │   │   DeNoronha
-        │       │   │   │   │   East
-        │       │   │   │   │   West
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Canada
-        │       │   │   │   │   Atlantic
-        │       │   │   │   │   Central
-        │       │   │   │   │   Eastern
-        │       │   │   │   │   Mountain
-        │       │   │   │   │   Newfoundland
-        │       │   │   │   │   Pacific
-        │       │   │   │   │   Saskatchewan
-        │       │   │   │   │   Yukon
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Chile
-        │       │   │   │   │   Continental
-        │       │   │   │   │   EasterIsland
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Etc
-        │       │   │   │   │   GMT
-        │       │   │   │   │   GMT+0
-        │       │   │   │   │   GMT+1
-        │       │   │   │   │   GMT+10
-        │       │   │   │   │   GMT+11
-        │       │   │   │   │   GMT+12
-        │       │   │   │   │   GMT+2
-        │       │   │   │   │   GMT+3
-        │       │   │   │   │   GMT+4
-        │       │   │   │   │   GMT+5
-        │       │   │   │   │   GMT+6
-        │       │   │   │   │   GMT+7
-        │       │   │   │   │   GMT+8
-        │       │   │   │   │   GMT+9
-        │       │   │   │   │   GMT-0
-        │       │   │   │   │   GMT-1
-        │       │   │   │   │   GMT-10
-        │       │   │   │   │   GMT-11
-        │       │   │   │   │   GMT-12
-        │       │   │   │   │   GMT-13
-        │       │   │   │   │   GMT-14
-        │       │   │   │   │   GMT-2
-        │       │   │   │   │   GMT-3
-        │       │   │   │   │   GMT-4
-        │       │   │   │   │   GMT-5
-        │       │   │   │   │   GMT-6
-        │       │   │   │   │   GMT-7
-        │       │   │   │   │   GMT-8
-        │       │   │   │   │   GMT-9
-        │       │   │   │   │   GMT0
-        │       │   │   │   │   Greenwich
-        │       │   │   │   │   UCT
-        │       │   │   │   │   Universal
-        │       │   │   │   │   UTC
-        │       │   │   │   │   Zulu
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Europe
-        │       │   │   │   │   Amsterdam
-        │       │   │   │   │   Andorra
-        │       │   │   │   │   Astrakhan
-        │       │   │   │   │   Athens
-        │       │   │   │   │   Belfast
-        │       │   │   │   │   Belgrade
-        │       │   │   │   │   Berlin
-        │       │   │   │   │   Bratislava
-        │       │   │   │   │   Brussels
-        │       │   │   │   │   Bucharest
-        │       │   │   │   │   Budapest
-        │       │   │   │   │   Busingen
-        │       │   │   │   │   Chisinau
-        │       │   │   │   │   Copenhagen
-        │       │   │   │   │   Dublin
-        │       │   │   │   │   Gibraltar
-        │       │   │   │   │   Guernsey
-        │       │   │   │   │   Helsinki
-        │       │   │   │   │   Isle_of_Man
-        │       │   │   │   │   Istanbul
-        │       │   │   │   │   Jersey
-        │       │   │   │   │   Kaliningrad
-        │       │   │   │   │   Kiev
-        │       │   │   │   │   Kirov
-        │       │   │   │   │   Kyiv
-        │       │   │   │   │   Lisbon
-        │       │   │   │   │   Ljubljana
-        │       │   │   │   │   London
-        │       │   │   │   │   Luxembourg
-        │       │   │   │   │   Madrid
-        │       │   │   │   │   Malta
-        │       │   │   │   │   Mariehamn
-        │       │   │   │   │   Minsk
-        │       │   │   │   │   Monaco
-        │       │   │   │   │   Moscow
-        │       │   │   │   │   Nicosia
-        │       │   │   │   │   Oslo
-        │       │   │   │   │   Paris
-        │       │   │   │   │   Podgorica
-        │       │   │   │   │   Prague
-        │       │   │   │   │   Riga
-        │       │   │   │   │   Rome
-        │       │   │   │   │   Samara
-        │       │   │   │   │   San_Marino
-        │       │   │   │   │   Sarajevo
-        │       │   │   │   │   Saratov
-        │       │   │   │   │   Simferopol
-        │       │   │   │   │   Skopje
-        │       │   │   │   │   Sofia
-        │       │   │   │   │   Stockholm
-        │       │   │   │   │   Tallinn
-        │       │   │   │   │   Tirane
-        │       │   │   │   │   Tiraspol
-        │       │   │   │   │   Ulyanovsk
-        │       │   │   │   │   Uzhgorod
-        │       │   │   │   │   Vaduz
-        │       │   │   │   │   Vatican
-        │       │   │   │   │   Vienna
-        │       │   │   │   │   Vilnius
-        │       │   │   │   │   Volgograd
-        │       │   │   │   │   Warsaw
-        │       │   │   │   │   Zagreb
-        │       │   │   │   │   Zaporozhye
-        │       │   │   │   │   Zurich
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Indian
-        │       │   │   │   │   Antananarivo
-        │       │   │   │   │   Chagos
-        │       │   │   │   │   Christmas
-        │       │   │   │   │   Cocos
-        │       │   │   │   │   Comoro
-        │       │   │   │   │   Kerguelen
-        │       │   │   │   │   Mahe
-        │       │   │   │   │   Maldives
-        │       │   │   │   │   Mauritius
-        │       │   │   │   │   Mayotte
-        │       │   │   │   │   Reunion
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Mexico
-        │       │   │   │   │   BajaNorte
-        │       │   │   │   │   BajaSur
-        │       │   │   │   │   General
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───Pacific
-        │       │   │   │   │   Apia
-        │       │   │   │   │   Auckland
-        │       │   │   │   │   Bougainville
-        │       │   │   │   │   Chatham
-        │       │   │   │   │   Chuuk
-        │       │   │   │   │   Easter
-        │       │   │   │   │   Efate
-        │       │   │   │   │   Enderbury
-        │       │   │   │   │   Fakaofo
-        │       │   │   │   │   Fiji
-        │       │   │   │   │   Funafuti
-        │       │   │   │   │   Galapagos
-        │       │   │   │   │   Gambier
-        │       │   │   │   │   Guadalcanal
-        │       │   │   │   │   Guam
-        │       │   │   │   │   Honolulu
-        │       │   │   │   │   Johnston
-        │       │   │   │   │   Kanton
-        │       │   │   │   │   Kiritimati
-        │       │   │   │   │   Kosrae
-        │       │   │   │   │   Kwajalein
-        │       │   │   │   │   Majuro
-        │       │   │   │   │   Marquesas
-        │       │   │   │   │   Midway
-        │       │   │   │   │   Nauru
-        │       │   │   │   │   Niue
-        │       │   │   │   │   Norfolk
-        │       │   │   │   │   Noumea
-        │       │   │   │   │   Pago_Pago
-        │       │   │   │   │   Palau
-        │       │   │   │   │   Pitcairn
-        │       │   │   │   │   Pohnpei
-        │       │   │   │   │   Ponape
-        │       │   │   │   │   Port_Moresby
-        │       │   │   │   │   Rarotonga
-        │       │   │   │   │   Saipan
-        │       │   │   │   │   Samoa
-        │       │   │   │   │   Tahiti
-        │       │   │   │   │   Tarawa
-        │       │   │   │   │   Tongatapu
-        │       │   │   │   │   Truk
-        │       │   │   │   │   Wake
-        │       │   │   │   │   Wallis
-        │       │   │   │   │   Yap
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───US
-        │       │   │   │   │   Alaska
-        │       │   │   │   │   Aleutian
-        │       │   │   │   │   Arizona
-        │       │   │   │   │   Central
-        │       │   │   │   │   East-Indiana
-        │       │   │   │   │   Eastern
-        │       │   │   │   │   Hawaii
-        │       │   │   │   │   Indiana-Starke
-        │       │   │   │   │   Michigan
-        │       │   │   │   │   Mountain
-        │       │   │   │   │   Pacific
-        │       │   │   │   │   Samoa
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   └───__pycache__
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   └───__pycache__
-        │       │           __init__.cpython-311.pyc
-        │       │           
-        │       ├───tzdata-2026.3.dist-info
-        │       │   │   INSTALLER
-        │       │   │   METADATA
-        │       │   │   RECORD
-        │       │   │   top_level.txt
-        │       │   │   WHEEL
-        │       │   │   
-        │       │   └───licenses
-        │       │       │   LICENSE
-        │       │       │   
-        │       │       └───licenses
-        │       │               LICENSE_APACHE
-        │       │               
-        │       ├───urllib3
-        │       │   │   connection.py
-        │       │   │   connectionpool.py
-        │       │   │   exceptions.py
-        │       │   │   fields.py
-        │       │   │   filepost.py
-        │       │   │   poolmanager.py
-        │       │   │   py.typed
-        │       │   │   response.py
-        │       │   │   _base_connection.py
-        │       │   │   _collections.py
-        │       │   │   _request_methods.py
-        │       │   │   _version.py
-        │       │   │   __init__.py
-        │       │   │   
-        │       │   ├───contrib
-        │       │   │   │   pyopenssl.py
-        │       │   │   │   socks.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   ├───emscripten
-        │       │   │   │   │   connection.py
-        │       │   │   │   │   emscripten_fetch_worker.js
-        │       │   │   │   │   fetch.py
-        │       │   │   │   │   request.py
-        │       │   │   │   │   response.py
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           connection.cpython-311.pyc
-        │       │   │   │           fetch.cpython-311.pyc
-        │       │   │   │           request.cpython-311.pyc
-        │       │   │   │           response.cpython-311.pyc
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   └───__pycache__
-        │       │   │           pyopenssl.cpython-311.pyc
-        │       │   │           socks.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───http2
-        │       │   │   │   connection.py
-        │       │   │   │   probe.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           connection.cpython-311.pyc
-        │       │   │           probe.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───util
-        │       │   │   │   connection.py
-        │       │   │   │   proxy.py
-        │       │   │   │   request.py
-        │       │   │   │   response.py
-        │       │   │   │   retry.py
-        │       │   │   │   ssltransport.py
-        │       │   │   │   ssl_.py
-        │       │   │   │   ssl_match_hostname.py
-        │       │   │   │   timeout.py
-        │       │   │   │   url.py
-        │       │   │   │   util.py
-        │       │   │   │   wait.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           connection.cpython-311.pyc
-        │       │   │           proxy.cpython-311.pyc
-        │       │   │           request.cpython-311.pyc
-        │       │   │           response.cpython-311.pyc
-        │       │   │           retry.cpython-311.pyc
-        │       │   │           ssltransport.cpython-311.pyc
-        │       │   │           ssl_.cpython-311.pyc
-        │       │   │           ssl_match_hostname.cpython-311.pyc
-        │       │   │           timeout.cpython-311.pyc
-        │       │   │           url.cpython-311.pyc
-        │       │   │           util.cpython-311.pyc
-        │       │   │           wait.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   └───__pycache__
-        │       │           connection.cpython-311.pyc
-        │       │           connectionpool.cpython-311.pyc
-        │       │           exceptions.cpython-311.pyc
-        │       │           fields.cpython-311.pyc
-        │       │           filepost.cpython-311.pyc
-        │       │           poolmanager.cpython-311.pyc
-        │       │           response.cpython-311.pyc
-        │       │           _base_connection.cpython-311.pyc
-        │       │           _collections.cpython-311.pyc
-        │       │           _request_methods.cpython-311.pyc
-        │       │           _version.cpython-311.pyc
-        │       │           __init__.cpython-311.pyc
-        │       │           
-        │       ├───urllib3-2.7.0.dist-info
-        │       │   │   INSTALLER
-        │       │   │   METADATA
-        │       │   │   RECORD
-        │       │   │   WHEEL
-        │       │   │   
-        │       │   └───licenses
-        │       │           LICENSE.txt
-        │       │           
-        │       ├───uvicorn
-        │       │   │   config.py
-        │       │   │   importer.py
-        │       │   │   logging.py
-        │       │   │   main.py
-        │       │   │   py.typed
-        │       │   │   server.py
-        │       │   │   workers.py
-        │       │   │   _ansi.py
-        │       │   │   _compat.py
-        │       │   │   _subprocess.py
-        │       │   │   _types.py
-        │       │   │   __init__.py
-        │       │   │   __main__.py
-        │       │   │   
-        │       │   ├───lifespan
-        │       │   │   │   off.py
-        │       │   │   │   on.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           off.cpython-311.pyc
-        │       │   │           on.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───loops
-        │       │   │   │   asyncio.py
-        │       │   │   │   auto.py
-        │       │   │   │   uvloop.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           asyncio.cpython-311.pyc
-        │       │   │           auto.cpython-311.pyc
-        │       │   │           uvloop.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───middleware
-        │       │   │   │   asgi2.py
-        │       │   │   │   message_logger.py
-        │       │   │   │   proxy_headers.py
-        │       │   │   │   wsgi.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           asgi2.cpython-311.pyc
-        │       │   │           message_logger.cpython-311.pyc
-        │       │   │           proxy_headers.cpython-311.pyc
-        │       │   │           wsgi.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───protocols
-        │       │   │   │   utils.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   ├───http
-        │       │   │   │   │   auto.py
-        │       │   │   │   │   flow_control.py
-        │       │   │   │   │   h11_impl.py
-        │       │   │   │   │   httptools_impl.py
-        │       │   │   │   │   zttp_impl.py
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           auto.cpython-311.pyc
-        │       │   │   │           flow_control.cpython-311.pyc
-        │       │   │   │           h11_impl.cpython-311.pyc
-        │       │   │   │           httptools_impl.cpython-311.pyc
-        │       │   │   │           zttp_impl.cpython-311.pyc
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   ├───websockets
-        │       │   │   │   │   auto.py
-        │       │   │   │   │   websockets_impl.py
-        │       │   │   │   │   websockets_sansio_impl.py
-        │       │   │   │   │   wsproto_impl.py
-        │       │   │   │   │   __init__.py
-        │       │   │   │   │   
-        │       │   │   │   └───__pycache__
-        │       │   │   │           auto.cpython-311.pyc
-        │       │   │   │           websockets_impl.cpython-311.pyc
-        │       │   │   │           websockets_sansio_impl.cpython-311.pyc
-        │       │   │   │           wsproto_impl.cpython-311.pyc
-        │       │   │   │           __init__.cpython-311.pyc
-        │       │   │   │           
-        │       │   │   └───__pycache__
-        │       │   │           utils.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───supervisors
-        │       │   │   │   basereload.py
-        │       │   │   │   multiprocess.py
-        │       │   │   │   statreload.py
-        │       │   │   │   watchfilesreload.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           basereload.cpython-311.pyc
-        │       │   │           multiprocess.cpython-311.pyc
-        │       │   │           statreload.cpython-311.pyc
-        │       │   │           watchfilesreload.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   └───__pycache__
-        │       │           config.cpython-311.pyc
-        │       │           importer.cpython-311.pyc
-        │       │           logging.cpython-311.pyc
-        │       │           main.cpython-311.pyc
-        │       │           server.cpython-311.pyc
-        │       │           workers.cpython-311.pyc
-        │       │           _ansi.cpython-311.pyc
-        │       │           _compat.cpython-311.pyc
-        │       │           _subprocess.cpython-311.pyc
-        │       │           _types.cpython-311.pyc
-        │       │           __init__.cpython-311.pyc
-        │       │           __main__.cpython-311.pyc
-        │       │           
-        │       ├───uvicorn-0.52.3.dist-info
-        │       │   │   entry_points.txt
-        │       │   │   INSTALLER
-        │       │   │   METADATA
-        │       │   │   RECORD
-        │       │   │   WHEEL
-        │       │   │   
-        │       │   └───licenses
-        │       │           LICENSE.md
-        │       │           
-        │       ├───watchdog
-        │       │   │   events.py
-        │       │   │   py.typed
-        │       │   │   version.py
-        │       │   │   watchmedo.py
-        │       │   │   __init__.py
-        │       │   │   
-        │       │   ├───observers
-        │       │   │   │   api.py
-        │       │   │   │   fsevents.py
-        │       │   │   │   fsevents2.py
-        │       │   │   │   inotify.py
-        │       │   │   │   inotify_buffer.py
-        │       │   │   │   inotify_c.py
-        │       │   │   │   kqueue.py
-        │       │   │   │   polling.py
-        │       │   │   │   read_directory_changes.py
-        │       │   │   │   winapi.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           api.cpython-311.pyc
-        │       │   │           fsevents.cpython-311.pyc
-        │       │   │           fsevents2.cpython-311.pyc
-        │       │   │           inotify.cpython-311.pyc
-        │       │   │           inotify_buffer.cpython-311.pyc
-        │       │   │           inotify_c.cpython-311.pyc
-        │       │   │           kqueue.cpython-311.pyc
-        │       │   │           polling.cpython-311.pyc
-        │       │   │           read_directory_changes.cpython-311.pyc
-        │       │   │           winapi.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───tricks
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───utils
-        │       │   │   │   bricks.py
-        │       │   │   │   delayed_queue.py
-        │       │   │   │   dirsnapshot.py
-        │       │   │   │   echo.py
-        │       │   │   │   event_debouncer.py
-        │       │   │   │   patterns.py
-        │       │   │   │   platform.py
-        │       │   │   │   process_watcher.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           bricks.cpython-311.pyc
-        │       │   │           delayed_queue.cpython-311.pyc
-        │       │   │           dirsnapshot.cpython-311.pyc
-        │       │   │           echo.cpython-311.pyc
-        │       │   │           event_debouncer.cpython-311.pyc
-        │       │   │           patterns.cpython-311.pyc
-        │       │   │           platform.cpython-311.pyc
-        │       │   │           process_watcher.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   └───__pycache__
-        │       │           events.cpython-311.pyc
-        │       │           version.cpython-311.pyc
-        │       │           watchmedo.cpython-311.pyc
-        │       │           __init__.cpython-311.pyc
-        │       │           
-        │       ├───watchdog-6.0.0.dist-info
-        │       │       AUTHORS
-        │       │       COPYING
-        │       │       entry_points.txt
-        │       │       INSTALLER
-        │       │       LICENSE
-        │       │       METADATA
-        │       │       RECORD
-        │       │       top_level.txt
-        │       │       WHEEL
-        │       │       
-        │       ├───websockets
-        │       │   │   auth.py
-        │       │   │   cli.py
-        │       │   │   client.py
-        │       │   │   connection.py
-        │       │   │   datastructures.py
-        │       │   │   exceptions.py
-        │       │   │   frames.py
-        │       │   │   headers.py
-        │       │   │   http.py
-        │       │   │   http11.py
-        │       │   │   imports.py
-        │       │   │   protocol.py
-        │       │   │   proxy.py
-        │       │   │   py.typed
-        │       │   │   server.py
-        │       │   │   speedups.c
-        │       │   │   speedups.cp311-win_amd64.pyd
-        │       │   │   speedups.pyi
-        │       │   │   streams.py
-        │       │   │   typing.py
-        │       │   │   uri.py
-        │       │   │   utils.py
-        │       │   │   version.py
-        │       │   │   __init__.py
-        │       │   │   __main__.py
-        │       │   │   
-        │       │   ├───asyncio
-        │       │   │   │   async_timeout.py
-        │       │   │   │   client.py
-        │       │   │   │   compatibility.py
-        │       │   │   │   connection.py
-        │       │   │   │   messages.py
-        │       │   │   │   router.py
-        │       │   │   │   server.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           async_timeout.cpython-311.pyc
-        │       │   │           client.cpython-311.pyc
-        │       │   │           compatibility.cpython-311.pyc
-        │       │   │           connection.cpython-311.pyc
-        │       │   │           messages.cpython-311.pyc
-        │       │   │           router.cpython-311.pyc
-        │       │   │           server.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───extensions
-        │       │   │   │   base.py
-        │       │   │   │   permessage_deflate.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           base.cpython-311.pyc
-        │       │   │           permessage_deflate.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───legacy
-        │       │   │   │   auth.py
-        │       │   │   │   client.py
-        │       │   │   │   exceptions.py
-        │       │   │   │   framing.py
-        │       │   │   │   handshake.py
-        │       │   │   │   http.py
-        │       │   │   │   protocol.py
-        │       │   │   │   server.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           auth.cpython-311.pyc
-        │       │   │           client.cpython-311.pyc
-        │       │   │           exceptions.cpython-311.pyc
-        │       │   │           framing.cpython-311.pyc
-        │       │   │           handshake.cpython-311.pyc
-        │       │   │           http.cpython-311.pyc
-        │       │   │           protocol.cpython-311.pyc
-        │       │   │           server.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   ├───sync
-        │       │   │   │   client.py
-        │       │   │   │   connection.py
-        │       │   │   │   messages.py
-        │       │   │   │   router.py
-        │       │   │   │   server.py
-        │       │   │   │   utils.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           client.cpython-311.pyc
-        │       │   │           connection.cpython-311.pyc
-        │       │   │           messages.cpython-311.pyc
-        │       │   │           router.cpython-311.pyc
-        │       │   │           server.cpython-311.pyc
-        │       │   │           utils.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   └───__pycache__
-        │       │           auth.cpython-311.pyc
-        │       │           cli.cpython-311.pyc
-        │       │           client.cpython-311.pyc
-        │       │           connection.cpython-311.pyc
-        │       │           datastructures.cpython-311.pyc
-        │       │           exceptions.cpython-311.pyc
-        │       │           frames.cpython-311.pyc
-        │       │           headers.cpython-311.pyc
-        │       │           http.cpython-311.pyc
-        │       │           http11.cpython-311.pyc
-        │       │           imports.cpython-311.pyc
-        │       │           protocol.cpython-311.pyc
-        │       │           proxy.cpython-311.pyc
-        │       │           server.cpython-311.pyc
-        │       │           streams.cpython-311.pyc
-        │       │           typing.cpython-311.pyc
-        │       │           uri.cpython-311.pyc
-        │       │           utils.cpython-311.pyc
-        │       │           version.cpython-311.pyc
-        │       │           __init__.cpython-311.pyc
-        │       │           __main__.cpython-311.pyc
-        │       │           
-        │       ├───websockets-16.1.1.dist-info
-        │       │   │   entry_points.txt
-        │       │   │   INSTALLER
-        │       │   │   METADATA
-        │       │   │   RECORD
-        │       │   │   top_level.txt
-        │       │   │   WHEEL
-        │       │   │   
-        │       │   └───licenses
-        │       │           LICENSE
-        │       │           
-        │       ├───_distutils_hack
-        │       │   │   override.py
-        │       │   │   __init__.py
-        │       │   │   
-        │       │   └───__pycache__
-        │       │           override.cpython-311.pyc
-        │       │           __init__.cpython-311.pyc
-        │       │           
-        │       ├───_plotly_utils
-        │       │   │   basevalidators.py
-        │       │   │   data_utils.py
-        │       │   │   exceptions.py
-        │       │   │   files.py
-        │       │   │   importers.py
-        │       │   │   optional_imports.py
-        │       │   │   png.py
-        │       │   │   README.md
-        │       │   │   utils.py
-        │       │   │   __init__.py
-        │       │   │   
-        │       │   ├───colors
-        │       │   │   │   carto.py
-        │       │   │   │   cmocean.py
-        │       │   │   │   colorbrewer.py
-        │       │   │   │   cyclical.py
-        │       │   │   │   diverging.py
-        │       │   │   │   plotlyjs.py
-        │       │   │   │   qualitative.py
-        │       │   │   │   sequential.py
-        │       │   │   │   _swatches.py
-        │       │   │   │   __init__.py
-        │       │   │   │   
-        │       │   │   └───__pycache__
-        │       │   │           carto.cpython-311.pyc
-        │       │   │           cmocean.cpython-311.pyc
-        │       │   │           colorbrewer.cpython-311.pyc
-        │       │   │           cyclical.cpython-311.pyc
-        │       │   │           diverging.cpython-311.pyc
-        │       │   │           plotlyjs.cpython-311.pyc
-        │       │   │           qualitative.cpython-311.pyc
-        │       │   │           sequential.cpython-311.pyc
-        │       │   │           _swatches.cpython-311.pyc
-        │       │   │           __init__.cpython-311.pyc
-        │       │   │           
-        │       │   └───__pycache__
-        │       │           basevalidators.cpython-311.pyc
-        │       │           data_utils.cpython-311.pyc
-        │       │           exceptions.cpython-311.pyc
-        │       │           files.cpython-311.pyc
-        │       │           importers.cpython-311.pyc
-        │       │           optional_imports.cpython-311.pyc
-        │       │           png.cpython-311.pyc
-        │       │           utils.cpython-311.pyc
-        │       │           __init__.cpython-311.pyc
-        │       │           
-        │       └───__pycache__
-        │               six.cpython-311.pyc
-        │               typing_extensions.cpython-311.pyc
-        │               
-        ├───Scripts
-        │       activate
-        │       activate.bat
-        │       Activate.ps1
-        │       deactivate.bat
-        │       f2py.exe
-        │       idna.exe
-        │       jsonschema.exe
-        │       normalizer.exe
-        │       numpy-config.exe
-        │       pip.exe
-        │       pip3.11.exe
-        │       pip3.exe
-        │       plotly_get_chrome.exe
-        │       python.exe
-        │       pythonw.exe
-        │       streamlit.exe
-        │       uvicorn.exe
-        │       watchmedo.exe
-        │       websockets.exe
-        │       
-        └───share
-            └───jupyter
-                ├───labextensions
-                │   └───jupyterlab-plotly
-                │       │   install.json
-                │       │   package.json
-                │       │   
-                │       └───static
-                │               1.3ad216e94ff8bdcd7b73.js
-                │               1.3ad216e94ff8bdcd7b73.js.LICENSE.txt
-                │               remoteEntry.58c394332ed33325ffe5.js
-                │               style.js
-                │               third-party-licenses.json
-                │               
-                └───nbextensions
-                    └───pydeck
-                            extensionRequires.js
-                            index.js
-                            index.js.map
+
+A production-grade Business Intelligence / Decision Support System that turns raw hospital operational data into a secure, real-time, interactive dashboard — built with Python, Pandas, Plotly and Streamlit.
+
+Raw data (patients, lab, pharmacy, ambulance, staff, appointments, OT, emergency) → cleaning → curated KPIs → insight-driven charts → alerts → faster, data-driven decisions for hospital administrators.
+
+
+## 1. Project Structure
+hospital_dashboard/
+├── Home.py                          # Login gate + sidebar navigation (entry point)
+├── views/
+│   ├── Overview.py                  # Executive KPIs, alerts, trends, revenue mix
+│   ├── Patient_Overview.py          # Hospital_Visits deep-dive
+│   ├── Laboratory.py                # laboratory data
+│   ├── Pharmacy.py                  # pharmacy data
+│   ├── Ambulance.py                 # Ambulance_Transportation
+│   ├── Staff_Scheduling.py          # Staff_Scheduling
+│   ├── Appointments.py              # Appointments
+│   ├── OT_Dashboard.py              # OT_Dashboard
+│   └── Emergency_Monitoring.py      # ER_Monitoring_Summary
+├── utils/
+│   ├── auth.py                      # Session-based access guard for every page
+│   ├── data_loader.py               # Reads + cleans every sheet (cached)
+│   ├── kpi.py                       # KPI math + alert/"intelligence" rules
+│   └── styling.py                   # Design system: theme, KPI cards, icons, insight charts
+├── data/
+│   └── Hospital_Dataset_Complete_Project.xlsx   # Bundled sample dataset
+├── .streamlit/
+│   ├── config.toml                  # Theme + server config
+│   └── secrets.toml.example         # Copy to secrets.toml and set real credentials
+├── requirements.txt
+└── README.md
+
+## 2. What each page shows
+
+| Page | Source Sheet | Highlights |
+|---|---|---|
+| Overview | All Sheets | 7 curated executive KPIs, alerts, trends, revenue mix |
+| Patient Overview | Hospital_Visits | Demographics, admissions, billing, satisfaction |
+| Laboratory | Laboratory_data | Test volume, revenue, category mix, technician load |
+| Pharmacy | pharmacy_data | Sales, category/brand performance, demand intelligence |
+| Ambulance | Ambulance_Transportation | Response/travel time, fuel cost, driver workload |
+| Staff Scheduling | Staff_Scheduling | Leave rate, overtime, duty types, emergency coverage |
+| Appointments | Appointments | Completion, cancellation, no-show rate, peak hours |
+| OT Dashboard | OT_Dashboard | Surgery status, room utilization, surgeon workload |
+| Emergency Monitoring | ER_Monitoring_Summary | Monthly case trends, category/season heatmap |
+Each page is intentionally trimmed to its 5–7 most decision-relevant KPIs (one visually emphasized "hero" metric plus supporting metrics), an Alerts section that turns raw numbers into plain-language guidance (e.g. "Bed occupancy is at 92% — prepare additional beds"), and bar charts that highlight the single most important bar (max/min) instead of a wall of same-colored columns.
+
+Note on medicine stock: the source dataset does not include a live stock-on-hand column, so the Pharmacy page surfaces dispensing velocity (fastest-moving medicines) as a practical proxy for reorder alerts instead of a literal stock count.
+
+## 3. Authentication
+Sign-in is required before any dashboard page is reachable:
+
+Home.py shows a login form and only mounts the sidebar navigation after a successful sign-in.
+utils/auth.py adds a second safety net (require_login()) on every individual page, in case its direct URL is opened before signing in.
+Credentials are read from .streamlit/secrets.toml (see secrets.toml.example for the format) rather than hardcoded in source. Never commit your real secrets.toml — it is already listed in .gitignore.
+Default demo credentials (set in secrets.toml.example):
+
+Username	Password
+admin	admin123
+doctor	hospital2026
+change these before deploying to production.
+
+## 4. Run locally
+Requirements: Python 3.10+
+# 1. (Recommended) create a virtual environment
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Set up your credentials
+cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+# then edit .streamlit/secrets.toml with your own username/password pairs
+
+# 4. Run the app
+streamlit run Home.py
+The app opens at http://localhost:8501. The bundled Excel file in data/Hospital_Dataset_Complete_Project.xlsx loads automatically — no setup needed. You can also upload a different workbook (same 8 sheet names) from the sidebar on the Overview page; every other page will automatically use that uploaded data too.
+
+## 5.Deploy to Streamlit Community Cloud
+Push this folder to a GitHub repository (keep the data/ folder in the repo so the sample dataset ships with the app, or remove it and rely purely on the in-app uploader). Do not commit .streamlit/secrets.toml.
+Go to https://share.streamlit.io/ → New app.
+Select your repository, branch, and set Main file path to Home.py.
+In the app's Settings → Secrets, paste the contents of your local secrets.toml (this is how Streamlit Cloud injects st.secrets).
+Click Deploy. Streamlit Cloud installs everything from requirements.txt automatically.
+Any time you git push changes, the deployed app auto-updates.
+Other deployment options
+Render / Railway / Fly.io / a VM: run streamlit run Home.py --server.port $PORT --server.address 0.0.0.0 and provide .streamlit/secrets.toml on the server (or environment-based secrets, per platform).
+Docker:
+
+FROM python:3.11-slim
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 8501
+CMD ["streamlit", "run", "Home.py", "--server.address=0.0.0.0"]
+
+## 6. Using your own hospital data
+The app expects an Excel workbook with these exact sheet names:
+
+Hospital_Visits, laboratory data, pharmacy data, Ambulance_Transportation,
+Staff_Scheduling, Appointments, OT_Dashboard, ER_Monitoring_Summary
+Either replace data/Hospital_Dataset_Complete_Project.xlsx with your own file (same sheet/column names), or use the file uploader in the sidebar of the Overview page at runtime — no code changes required.
+
+## 7. Design system
+utils/styling.py is the single source of truth for the look and feel, so every page stays visually consistent:
+
+A hand-built, stroke-based icon set (no emoji, no external icon-font CDN).
+page_header() — the gradient banner at the top of every page.
+filter_bar() — a bordered filter card at the top of each page (not the sidebar) so filters are visible without extra clicks, matching the in-page filter pattern used across the dashboard.
+render_kpi_cards() — a clean KPI grid with one visually emphasized "hero" metric and color-coded tone (good / warning / critical).
+gradient_bar() — a bar chart helper that shades every bar along a smooth color scale driven by its own value (darker = higher), so the trend is visible from color alone, not just bar height.
+chart_title() / section_title() — consistent headings, used inside st.container(border=True) chart cards so every grid stays aligned.
+Subtle fade-in animations and a soft gradient app background for a polished, non-distracting feel.
+
+## 8. Tech stack
+Streamlit — multipage web app / UI framework
+Pandas — Excel ingestion, cleaning, aggregation
+Plotly — interactive charts (line, bar, pie, heatmap)
+openpyxl — Excel engine used by Pandas
+
+## 9.Troubleshooting
+Issue	Fix
+ModuleNotFoundError	Run pip install -r requirements.txt inside your active environment
+Blank/old data after uploading a new file	Refresh the browser tab — Streamlit caches by file content, so a genuinely new file will reload automatically
+"No dataset loaded yet" on a sub-page	Open the Overview page first (via the sidebar) at least once per session
+Login fails with correct-looking credentials	Confirm .streamlit/secrets.toml exists and matches the format in secrets.toml.example
+Port already in use	streamlit run Home.py --server.port8502
+
+One-line summary: A Python/Streamlit Business Intelligence system that transforms raw hospital operational data into a secure, curated dashboard — 7-or-fewer decision-grade KPIs per page, insight-highlighted charts, and plain-language alerts — helping administrators monitor operations in real time and make faster, data-driven decisions.
